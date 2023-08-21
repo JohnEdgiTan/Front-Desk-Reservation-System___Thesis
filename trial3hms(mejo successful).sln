@@ -1,0 +1,29 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31321.278
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "trial3hms(mejo successful)", "trial3hms(mejo successful)\trial3hms(mejo successful).csproj", "{988CDCB3-4DDC-451D-9981-6D9D2F28319C}"
+EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "Front Desk PMS", "Front Desk PMS\Front Desk PMS.vdproj", "{48B7D3CB-000A-4041-86B7-E7A3DD514219}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{988CDCB3-4DDC-451D-9981-6D9D2F28319C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{988CDCB3-4DDC-451D-9981-6D9D2F28319C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{988CDCB3-4DDC-451D-9981-6D9D2F28319C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{988CDCB3-4DDC-451D-9981-6D9D2F28319C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{48B7D3CB-000A-4041-86B7-E7A3DD514219}.Debug|Any CPU.ActiveCfg = Debug
+		{48B7D3CB-000A-4041-86B7-E7A3DD514219}.Release|Any CPU.ActiveCfg = Release
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {C8ED47CD-1724-4604-9818-CAE0F5ECA33E}
+	EndGlobalSection
+EndGlobal

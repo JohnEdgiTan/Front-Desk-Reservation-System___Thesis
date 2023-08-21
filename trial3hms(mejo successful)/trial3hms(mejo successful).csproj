@@ -1,0 +1,923 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{988CDCB3-4DDC-451D-9981-6D9D2F28319C}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>WindowsFormsApplication1</RootNamespace>
+    <AssemblyName>Cavsu Hotel Management System</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <PublishUrl>C:\Users\John Edgi Tan\Desktop\ThesisLatestUpdateToototootototoootototooot\Thesis Final\Installer\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>17</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>4DDEB974F0C12E402684E1185E3AFE4ED213304B</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>trial3hms%28mejo successful%29_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>true</SignManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>logo2.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Bunifu.Licensing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=f89b4760ba7dcb6b, processorArchitecture=MSIL">
+      <HintPath>..\packages\Bunifu.UI.WinForms.5.0.3\lib\Bunifu.Licensing.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.1.5.3, Version=1.5.3.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9, processorArchitecture=MSIL">
+      <HintPath>..\packages\Bunifu.UI.WinForms.5.0.3\lib\Bunifu.UI.WinForms.1.5.3.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuButton, Version=4.1.1.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9, processorArchitecture=MSIL">
+      <HintPath>..\packages\Bunifu.UI.WinForms.5.0.3\lib\Bunifu.UI.WinForms.BunifuButton.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuCheckBox, Version=4.1.1.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9, processorArchitecture=MSIL">
+      <HintPath>..\packages\Bunifu.UI.WinForms.5.0.3\lib\Bunifu.UI.WinForms.BunifuCheckBox.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuCircleProgress, Version=4.1.1.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9, processorArchitecture=MSIL">
+      <HintPath>..\packages\Bunifu.UI.WinForms.5.0.3\lib\Bunifu.UI.WinForms.BunifuCircleProgress.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuColorTransition, Version=4.1.1.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9, processorArchitecture=MSIL">
+      <HintPath>..\packages\Bunifu.UI.WinForms.5.0.3\lib\Bunifu.UI.WinForms.BunifuColorTransition.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuDataGridView, Version=4.1.1.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9, processorArchitecture=MSIL">
+      <HintPath>..\packages\Bunifu.UI.WinForms.5.0.3\lib\Bunifu.UI.WinForms.BunifuDataGridView.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuDatePicker, Version=4.1.1.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9, processorArchitecture=MSIL">
+      <HintPath>..\packages\Bunifu.UI.WinForms.5.0.3\lib\Bunifu.UI.WinForms.BunifuDatePicker.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuDropdown, Version=4.1.1.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9, processorArchitecture=MSIL">
+      <HintPath>..\packages\Bunifu.UI.WinForms.5.0.3\lib\Bunifu.UI.WinForms.BunifuDropdown.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuFormDock, Version=4.1.1.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9, processorArchitecture=MSIL">
+      <HintPath>..\packages\Bunifu.UI.WinForms.5.0.3\lib\Bunifu.UI.WinForms.BunifuFormDock.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuGauge, Version=4.1.1.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9, processorArchitecture=MSIL">
+      <HintPath>..\packages\Bunifu.UI.WinForms.5.0.3\lib\Bunifu.UI.WinForms.BunifuGauge.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuGradientPanel, Version=4.1.1.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9, processorArchitecture=MSIL">
+      <HintPath>..\packages\Bunifu.UI.WinForms.5.0.3\lib\Bunifu.UI.WinForms.BunifuGradientPanel.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuGroupBox, Version=4.1.1.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9, processorArchitecture=MSIL">
+      <HintPath>..\packages\Bunifu.UI.WinForms.5.0.3\lib\Bunifu.UI.WinForms.BunifuGroupBox.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuImageButton, Version=4.1.1.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9, processorArchitecture=MSIL">
+      <HintPath>..\packages\Bunifu.UI.WinForms.5.0.3\lib\Bunifu.UI.WinForms.BunifuImageButton.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuLabel, Version=4.1.1.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9, processorArchitecture=MSIL">
+      <HintPath>..\packages\Bunifu.UI.WinForms.5.0.3\lib\Bunifu.UI.WinForms.BunifuLabel.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuPages, Version=4.1.1.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9, processorArchitecture=MSIL">
+      <HintPath>..\packages\Bunifu.UI.WinForms.5.0.3\lib\Bunifu.UI.WinForms.BunifuPages.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuPanel, Version=4.1.1.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9, processorArchitecture=MSIL">
+      <HintPath>..\packages\Bunifu.UI.WinForms.5.0.3\lib\Bunifu.UI.WinForms.BunifuPanel.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuPictureBox, Version=4.1.1.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9, processorArchitecture=MSIL">
+      <HintPath>..\packages\Bunifu.UI.WinForms.5.0.3\lib\Bunifu.UI.WinForms.BunifuPictureBox.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuProgressBar, Version=4.1.1.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9, processorArchitecture=MSIL">
+      <HintPath>..\packages\Bunifu.UI.WinForms.5.0.3\lib\Bunifu.UI.WinForms.BunifuProgressBar.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuRadioButton, Version=4.1.1.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9, processorArchitecture=MSIL">
+      <HintPath>..\packages\Bunifu.UI.WinForms.5.0.3\lib\Bunifu.UI.WinForms.BunifuRadioButton.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuRating, Version=4.1.1.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9, processorArchitecture=MSIL">
+      <HintPath>..\packages\Bunifu.UI.WinForms.5.0.3\lib\Bunifu.UI.WinForms.BunifuRating.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuScrollBar, Version=4.1.1.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9, processorArchitecture=MSIL">
+      <HintPath>..\packages\Bunifu.UI.WinForms.5.0.3\lib\Bunifu.UI.WinForms.BunifuScrollBar.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuSeparator, Version=4.1.1.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9, processorArchitecture=MSIL">
+      <HintPath>..\packages\Bunifu.UI.WinForms.5.0.3\lib\Bunifu.UI.WinForms.BunifuSeparator.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuShadowPanel, Version=4.1.1.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9, processorArchitecture=MSIL">
+      <HintPath>..\packages\Bunifu.UI.WinForms.5.0.3\lib\Bunifu.UI.WinForms.BunifuShadowPanel.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuShapes, Version=4.1.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Bunifu.UI.WinForms.5.0.3\lib\Bunifu.UI.WinForms.BunifuShapes.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuSlider, Version=4.1.1.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9, processorArchitecture=MSIL">
+      <HintPath>..\packages\Bunifu.UI.WinForms.5.0.3\lib\Bunifu.UI.WinForms.BunifuSlider.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuSnackbar, Version=4.1.1.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9, processorArchitecture=MSIL">
+      <HintPath>..\packages\Bunifu.UI.WinForms.5.0.3\lib\Bunifu.UI.WinForms.BunifuSnackbar.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuTextBox, Version=4.1.1.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9, processorArchitecture=MSIL">
+      <HintPath>..\packages\Bunifu.UI.WinForms.5.0.3\lib\Bunifu.UI.WinForms.BunifuTextBox.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuToggleSwitch, Version=4.1.1.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9, processorArchitecture=MSIL">
+      <HintPath>..\packages\Bunifu.UI.WinForms.5.0.3\lib\Bunifu.UI.WinForms.BunifuToggleSwitch.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuToolTip, Version=4.1.1.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9, processorArchitecture=MSIL">
+      <HintPath>..\packages\Bunifu.UI.WinForms.5.0.3\lib\Bunifu.UI.WinForms.BunifuToolTip.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuTransition, Version=4.1.1.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9, processorArchitecture=MSIL">
+      <HintPath>..\packages\Bunifu.UI.WinForms.5.0.3\lib\Bunifu.UI.WinForms.BunifuTransition.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuUserControl, Version=4.1.1.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9, processorArchitecture=MSIL">
+      <HintPath>..\packages\Bunifu.UI.WinForms.5.0.3\lib\Bunifu.UI.WinForms.BunifuUserControl.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.Deprecated, Version=4.1.1.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9, processorArchitecture=MSIL">
+      <HintPath>..\packages\Bunifu.UI.WinForms.5.0.3\lib\Bunifu.UI.WinForms.Deprecated.dll</HintPath>
+    </Reference>
+    <Reference Include="ClosedXML, Version=0.95.4.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\ClosedXML.0.95.4\lib\net46\ClosedXML.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Data.Desktop.v21.1, Version=21.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Data.v21.1, Version=21.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Printing.v21.1.Core, Version=21.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Sparkline.v21.1.Core, Version=21.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Utils.v21.1, Version=21.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraEditors.v21.1, Version=21.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DocumentFormat.OpenXml, Version=2.13.0.0, Culture=neutral, PublicKeyToken=8fb06cb64d019a17, processorArchitecture=MSIL">
+      <HintPath>..\packages\DocumentFormat.OpenXml.2.13.0\lib\net46\DocumentFormat.OpenXml.dll</HintPath>
+    </Reference>
+    <Reference Include="ExcelNumberFormat, Version=1.1.0.0, Culture=neutral, PublicKeyToken=23c6f5d73be07eca, processorArchitecture=MSIL">
+      <HintPath>..\packages\ExcelNumberFormat.1.1.0\lib\net20\ExcelNumberFormat.dll</HintPath>
+    </Reference>
+    <Reference Include="Guna.UI2, Version=2.0.1.9, Culture=neutral, PublicKeyToken=e4b9cdd7b4cde4b4, processorArchitecture=MSIL">
+      <HintPath>..\packages\Guna.UI2.WinForms.2.0.1.9\lib\net40\Guna.UI2.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=14.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportViewer.Common.10.0.40219.1\lib\Microsoft.ReportViewer.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.DataVisualization, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportViewer.Common.10.0.40219.1\lib\Microsoft.ReportViewer.DataVisualization.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.ProcessingObjectModel, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportViewer.Common.10.0.40219.1\lib\Microsoft.ReportViewer.ProcessingObjectModel.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.IdentityModel" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Tulpep.NotificationWindow, Version=1.1.38.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Tulpep.NotificationWindow.1.1.38\lib\net40\Tulpep.NotificationWindow.dll</HintPath>
+    </Reference>
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="accounts.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="accounts.Designer.cs">
+      <DependentUpon>accounts.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Add guest%28add company%29.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Add guest%28add company%29.Designer.cs">
+      <DependentUpon>Add guest%28add company%29.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Add Guest.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Add Guest.Designer.cs">
+      <DependentUpon>Add Guest.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Add payment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Add payment.Designer.cs">
+      <DependentUpon>Add payment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Add room type.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Add room type.Designer.cs">
+      <DependentUpon>Add room type.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Add room.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Add room.Designer.cs">
+      <DependentUpon>Add room.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Add roomrate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Add roomrate.Designer.cs">
+      <DependentUpon>Add roomrate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Add service.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Add service.Designer.cs">
+      <DependentUpon>Add service.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Add staff.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Add staff.Designer.cs">
+      <DependentUpon>Add staff.cs</DependentUpon>
+    </Compile>
+    <Compile Include="addservicename.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="addservicename.Designer.cs">
+      <DependentUpon>addservicename.cs</DependentUpon>
+    </Compile>
+    <Compile Include="backupdatabase.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="backupdatabase.Designer.cs">
+      <DependentUpon>backupdatabase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CheckIn.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CheckIn.Designer.cs">
+      <DependentUpon>CheckIn.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DailyReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DailyReport.Designer.cs">
+      <DependentUpon>DailyReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="edituser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="edituser.Designer.cs">
+      <DependentUpon>edituser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormAlertYellow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormAlertYellow.Designer.cs">
+      <DependentUpon>FormAlertYellow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports.Designer.cs">
+      <DependentUpon>Reports.cs</DependentUpon>
+    </Compile>
+    <Compile Include="delete guests.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="delete guests.Designer.cs">
+      <DependentUpon>delete guests.cs</DependentUpon>
+    </Compile>
+    <Compile Include="delete payment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="delete payment.Designer.cs">
+      <DependentUpon>delete payment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="delete reservation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="delete reservation.Designer.cs">
+      <DependentUpon>delete reservation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="delete roomtype.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="delete roomtype.Designer.cs">
+      <DependentUpon>delete roomtype.cs</DependentUpon>
+    </Compile>
+    <Compile Include="delete services.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="delete services.Designer.cs">
+      <DependentUpon>delete services.cs</DependentUpon>
+    </Compile>
+    <Compile Include="dashboard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="dashboard.Designer.cs">
+      <DependentUpon>dashboard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="setting.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="setting.Designer.cs">
+      <DependentUpon>setting.cs</DependentUpon>
+    </Compile>
+    <Compile Include="reservationmenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="reservationmenu.Designer.cs">
+      <DependentUpon>reservationmenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Guestform.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Guestform.Designer.cs">
+      <DependentUpon>Guestform.cs</DependentUpon>
+    </Compile>
+    <Compile Include="guestsreport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="guestsreport.Designer.cs">
+      <DependentUpon>guestsreport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="hmDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>hmDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="hmDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>hmDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ReportsDataSet.cs">
+      <DependentUpon>ReportsDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ReportsDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ReportsDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Reservation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reservation.Designer.cs">
+      <DependentUpon>Reservation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reservationreport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reservationreport.Designer.cs">
+      <DependentUpon>Reservationreport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Restoredatabase.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Restoredatabase.Designer.cs">
+      <DependentUpon>Restoredatabase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="roomreports.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="roomreports.Designer.cs">
+      <DependentUpon>roomreports.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Rooms.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Rooms.Designer.cs">
+      <DependentUpon>Rooms.cs</DependentUpon>
+    </Compile>
+    <Compile Include="servicereport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="servicereport.Designer.cs">
+      <DependentUpon>servicereport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Services1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Services1.Designer.cs">
+      <DependentUpon>Services1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="staffmanagement.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="staffmanagement.Designer.cs">
+      <DependentUpon>staffmanagement.cs</DependentUpon>
+    </Compile>
+    <Compile Include="update payment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="update payment.Designer.cs">
+      <DependentUpon>update payment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="update reservation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="update reservation.Designer.cs">
+      <DependentUpon>update reservation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="update room.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="update room.Designer.cs">
+      <DependentUpon>update room.cs</DependentUpon>
+    </Compile>
+    <Compile Include="update roomrate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="update roomrate.Designer.cs">
+      <DependentUpon>update roomrate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="update roomtype.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="update roomtype.Designer.cs">
+      <DependentUpon>update roomtype.cs</DependentUpon>
+    </Compile>
+    <Compile Include="update service.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="update service.Designer.cs">
+      <DependentUpon>update service.cs</DependentUpon>
+    </Compile>
+    <Compile Include="update staff.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="update staff.Designer.cs">
+      <DependentUpon>update staff.cs</DependentUpon>
+    </Compile>
+    <Compile Include="upgrade guest.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="upgrade guest.Designer.cs">
+      <DependentUpon>upgrade guest.cs</DependentUpon>
+    </Compile>
+    <Compile Include="userinformation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="userinformation.Designer.cs">
+      <DependentUpon>userinformation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserLogin.Designer.cs">
+      <DependentUpon>UserLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="mainmenuform.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="mainmenuform.Designer.cs">
+      <DependentUpon>mainmenuform.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Userloginhistory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Userloginhistory.Designer.cs">
+      <DependentUpon>Userloginhistory.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="accounts.resx">
+      <DependentUpon>accounts.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Add guest%28add company%29.resx">
+      <DependentUpon>Add guest%28add company%29.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Add Guest.resx">
+      <DependentUpon>Add Guest.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Add payment.resx">
+      <DependentUpon>Add payment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Add room type.resx">
+      <DependentUpon>Add room type.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Add room.resx">
+      <DependentUpon>Add room.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Add roomrate.resx">
+      <DependentUpon>Add roomrate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Add service.resx">
+      <DependentUpon>Add service.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Add staff.resx">
+      <DependentUpon>Add staff.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="addservicename.resx">
+      <DependentUpon>addservicename.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="backupdatabase.resx">
+      <DependentUpon>backupdatabase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CheckIn.resx">
+      <DependentUpon>CheckIn.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DailyReport.resx">
+      <DependentUpon>DailyReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="bin\Debug\Report1.rdlc" />
+    <EmbeddedResource Include="edituser.resx">
+      <DependentUpon>edituser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormAlertYellow.resx">
+      <DependentUpon>FormAlertYellow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Report6.rdlc" />
+    <EmbeddedResource Include="Reports.resx">
+      <DependentUpon>Reports.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="delete guests.resx">
+      <DependentUpon>delete guests.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="delete payment.resx">
+      <DependentUpon>delete payment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="delete reservation.resx">
+      <DependentUpon>delete reservation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="delete roomtype.resx">
+      <DependentUpon>delete roomtype.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="delete services.resx">
+      <DependentUpon>delete services.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="dashboard.resx">
+      <DependentUpon>dashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="setting.resx">
+      <DependentUpon>setting.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="reservationmenu.resx">
+      <DependentUpon>reservationmenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Guestform.resx">
+      <DependentUpon>Guestform.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="guestsreport.resx">
+      <DependentUpon>guestsreport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="bin\Debug\Report2.rdlc" />
+    <EmbeddedResource Include="bin\Debug\Report3.rdlc" />
+    <EmbeddedResource Include="bin\Debug\Report4.rdlc" />
+    <EmbeddedResource Include="bin\Debug\Report5.rdlc" />
+    <EmbeddedResource Include="Reservation.resx">
+      <DependentUpon>Reservation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reservationreport.resx">
+      <DependentUpon>Reservationreport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Restoredatabase.resx">
+      <DependentUpon>Restoredatabase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="roomreports.resx">
+      <DependentUpon>roomreports.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Rooms.resx">
+      <DependentUpon>Rooms.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="servicereport.resx">
+      <DependentUpon>servicereport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Services1.resx">
+      <DependentUpon>Services1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="staffmanagement.resx">
+      <DependentUpon>staffmanagement.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="update payment.resx">
+      <DependentUpon>update payment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="update reservation.resx">
+      <DependentUpon>update reservation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="update room.resx">
+      <DependentUpon>update room.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="update roomrate.resx">
+      <DependentUpon>update roomrate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="update roomtype.resx">
+      <DependentUpon>update roomtype.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="update service.resx">
+      <DependentUpon>update service.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="update staff.resx">
+      <DependentUpon>update staff.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="upgrade guest.resx">
+      <DependentUpon>upgrade guest.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="userinformation.resx">
+      <DependentUpon>userinformation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserLogin.resx">
+      <DependentUpon>UserLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="mainmenuform.resx">
+      <DependentUpon>mainmenuform.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Userloginhistory.resx">
+      <DependentUpon>Userloginhistory.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="hmDataSet.xsc">
+      <DependentUpon>hmDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="hmDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>hmDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="hmDataSet.xss">
+      <DependentUpon>hmDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="hmDataSet1.xsc">
+      <DependentUpon>hmDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="hmDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>hmDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="hmDataSet1.xss">
+      <DependentUpon>hmDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="ReportsDataSet.xsc">
+      <DependentUpon>ReportsDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="ReportsDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ReportsDataSet.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="ReportsDataSet.xss">
+      <DependentUpon>ReportsDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="trial3hms%28mejo successful%29_TemporaryKey.pfx" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\25497.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Image1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1stipc.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\images_4_.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Rooms.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Roomandbed.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Reserve.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\7th.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Guest.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\roomtype.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\roomr.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\roomrate.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.5.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.5.2 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.6">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.6 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.6.1">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.6.1 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.6.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.6.2 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.7">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.7 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.7.1">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.7.1 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.7.2 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.8">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.8 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.NetCore.CoreRuntime.3.1.x64">
+      <Visible>False</Visible>
+      <ProductName>.NET Core Runtime 3.1.15 %28x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.NetCore.CoreRuntime.3.1.x86">
+      <Visible>False</Visible>
+      <ProductName>.NET Core Runtime 3.1.15 %28x86%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.NetCore.CoreRuntime.5.0.x64">
+      <Visible>False</Visible>
+      <ProductName>.NET Runtime 5.0.6 %28x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.NetCore.CoreRuntime.5.0.x86">
+      <Visible>False</Visible>
+      <ProductName>.NET Runtime 5.0.6 %28x86%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.NetCore.DesktopRuntime.3.1.x64">
+      <Visible>False</Visible>
+      <ProductName>.NET Desktop Runtime 3.1.15 %28x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.NetCore.DesktopRuntime.3.1.x86">
+      <Visible>False</Visible>
+      <ProductName>.NET Desktop Runtime 3.1.15 %28x86%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.NetCore.DesktopRuntime.5.0.x64">
+      <Visible>False</Visible>
+      <ProductName>.NET Desktop Runtime 5.0.6 %28x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.NetCore.DesktopRuntime.5.0.x86">
+      <Visible>False</Visible>
+      <ProductName>.NET Desktop Runtime 5.0.6 %28x86%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.SqlServer.Express.10.5">
+      <Visible>False</Visible>
+      <ProductName>SQL Server 2008 R2 Express</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.SqlServer.Express.11.0">
+      <Visible>False</Visible>
+      <ProductName>SQL Server 2012 Express</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.SqlServer.SqlLocalDB.11.1">
+      <Visible>False</Visible>
+      <ProductName>SQL Server 2012 Express LocalDB</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.SqlServer.SqlLocalDB.13.2">
+      <Visible>False</Visible>
+      <ProductName>SQL Server 2016 Express LocalDB</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.SqlServer.SqlLocalDB.14.0">
+      <Visible>False</Visible>
+      <ProductName>SQL Server 2017 Express LocalDB</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.SqlServer.SqlLocalDB.15.0">
+      <Visible>False</Visible>
+      <ProductName>SQL Server 2019 Express LocalDB</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.SqlServer.SQLSysClrTypes.12.0.x64">
+      <Visible>False</Visible>
+      <ProductName>Microsoft® System CLR Types for SQL Server® 2014 %28x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.SqlServer.SQLSysClrTypes.12.0.x86">
+      <Visible>False</Visible>
+      <ProductName>Microsoft® System CLR Types for SQL Server® 2014 %28x86%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Visual.C++.14.0.x64">
+      <Visible>False</Visible>
+      <ProductName>Visual C++ "14" Runtime Libraries %28x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Visual.C++.14.0.x86">
+      <Visible>False</Visible>
+      <ProductName>Visual C++ "14" Runtime Libraries %28x86%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="hotelmanagement.mdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="hotelmanagement_log.ldf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <DependentUpon>hotelmanagement.mdf</DependentUpon>
+    </Content>
+    <Content Include="images_4_.ico" />
+    <Content Include="logo2.ico" />
+    <None Include="Resources\ok_52px.png" />
+    <None Include="Resources\ok_50px1.png" />
+    <None Include="Resources\ok_50px.png" />
+    <None Include="Resources\cancel.png" />
+    <None Include="Resources\alarm_30px.png" />
+    <None Include="Resources\single_bed_26px.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,392 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="ReportsDataSet" targetNamespace="http://tempuri.org/ReportsDataSet.xsd" xmlns:mstns="http://tempuri.org/ReportsDataSet.xsd" xmlns="http://tempuri.org/ReportsDataSet.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="hmConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="hmConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.WindowsFormsApplication1.Properties.Settings.GlobalReference.Default.hmConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="dailyreportTableAdapter" GeneratorDataComponentClassName="dailyreportTableAdapter" Name="dailyreport" UserDataComponentName="dailyreportTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="hmConnectionString (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        hm.roomorbed.Room_No, hm.roomorbed.Room_Type, hm.roomorbed.Name, hm.reservation.Total, hm.reservation.Paid, hm.reservation.Balance, hm.reservation.Status, hm.reservation.Check_in
+FROM            hm.roomorbed INNER JOIN
+                         hm.reservation ON hm.roomorbed.Room_No = hm.reservation.Room</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="Status" DataSetColumn="Status" />
+              <Mapping SourceColumn="Check_in" DataSetColumn="Check_in" />
+              <Mapping SourceColumn="Total" DataSetColumn="Total" />
+              <Mapping SourceColumn="Paid" DataSetColumn="Paid" />
+              <Mapping SourceColumn="Balance" DataSetColumn="Balance" />
+              <Mapping SourceColumn="Room_No" DataSetColumn="Room_No" />
+              <Mapping SourceColumn="Room_Type" DataSetColumn="Room_Type" />
+              <Mapping SourceColumn="Name" DataSetColumn="Name" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="reservation_reportTableAdapter" GeneratorDataComponentClassName="reservation_reportTableAdapter" Name="reservation_report" UserDataComponentName="reservation_reportTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="hmConnectionString (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        hm.roomorbed.Room_No, hm.roomorbed.Room_Type, hm.roomorbed.Name, hm.reservation.Check_in, hm.reservation.Check_Out, hm.reservation.Total, hm.reservation.Paid, hm.reservation.Balance, hm.reservation.Status, 
+                         hm.reservation.Room_Total, hm.reservation.Service_Total, hm.reservation.Net_Total
+FROM            hm.roomorbed INNER JOIN
+                         hm.reservation ON hm.roomorbed.Room_No = hm.reservation.Room</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="Name" DataSetColumn="Name" />
+              <Mapping SourceColumn="Room_No" DataSetColumn="Room_No" />
+              <Mapping SourceColumn="Room_Type" DataSetColumn="Room_Type" />
+              <Mapping SourceColumn="Check_in" DataSetColumn="Check_in" />
+              <Mapping SourceColumn="Check_Out" DataSetColumn="Check_Out" />
+              <Mapping SourceColumn="Total" DataSetColumn="Total" />
+              <Mapping SourceColumn="Paid" DataSetColumn="Paid" />
+              <Mapping SourceColumn="Balance" DataSetColumn="Balance" />
+              <Mapping SourceColumn="Status" DataSetColumn="Status" />
+              <Mapping SourceColumn="Room_Total" DataSetColumn="Room_Total" />
+              <Mapping SourceColumn="Service_Total" DataSetColumn="Service_Total" />
+              <Mapping SourceColumn="Net_Total" DataSetColumn="Net_Total" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="roomorbedreportTableAdapter" GeneratorDataComponentClassName="roomorbedreportTableAdapter" Name="roomorbedreport" UserDataComponentName="roomorbedreportTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="hmConnectionString (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        hm.roomorbed.Room_No, hm.roomorbed.Room_Type, hm.reservation.Total, hm.reservation.Check_in
+FROM            hm.roomorbed INNER JOIN
+                         hm.reservation ON hm.roomorbed.Room_No = hm.reservation.Room</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="Room_No" DataSetColumn="Room_No" />
+              <Mapping SourceColumn="Room_Type" DataSetColumn="Room_Type" />
+              <Mapping SourceColumn="Total" DataSetColumn="Total" />
+              <Mapping SourceColumn="Check_in" DataSetColumn="Check_in" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="servicereportsTableAdapter" GeneratorDataComponentClassName="servicereportsTableAdapter" Name="servicereports" UserDataComponentName="servicereportsTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="hmConnectionString (Settings)" DbObjectName="hm.hm.services" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        Service_Name, Type, Quantity, Subtotal, Date_Recorded
+FROM            hm.services</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="Service_Name" DataSetColumn="Service_Name" />
+              <Mapping SourceColumn="Type" DataSetColumn="Type" />
+              <Mapping SourceColumn="Quantity" DataSetColumn="Quantity" />
+              <Mapping SourceColumn="Subtotal" DataSetColumn="Subtotal" />
+              <Mapping SourceColumn="Date_Recorded" DataSetColumn="Date_Recorded" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="guestreportTableAdapter" GeneratorDataComponentClassName="guestreportTableAdapter" Name="guestreport" UserDataComponentName="guestreportTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="hmConnectionString (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        hm.reservation.Guest_Name, hm.guests.Guest_Type, hm.guests.Email, hm.guests.Phone1, hm.guests.Phone2, hm.reservation.Check_in, hm.reservation.Total, hm.reservation.Paid, hm.reservation.Balance
+FROM            hm.guests INNER JOIN
+                         hm.reservation ON hm.guests.Name = hm.reservation.Guest_Name</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="Email" DataSetColumn="Email" />
+              <Mapping SourceColumn="Phone1" DataSetColumn="Phone1" />
+              <Mapping SourceColumn="Phone2" DataSetColumn="Phone2" />
+              <Mapping SourceColumn="Guest_Type" DataSetColumn="Guest_Type" />
+              <Mapping SourceColumn="Guest_Name" DataSetColumn="Guest_Name" />
+              <Mapping SourceColumn="Check_in" DataSetColumn="Check_in" />
+              <Mapping SourceColumn="Total" DataSetColumn="Total" />
+              <Mapping SourceColumn="Paid" DataSetColumn="Paid" />
+              <Mapping SourceColumn="Balance" DataSetColumn="Balance" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="ReportsDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="ReportsDataSet" msprop:Generator_UserDSName="ReportsDataSet">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="dailyreport" msprop:Generator_TableClassName="dailyreportDataTable" msprop:Generator_TableVarName="tabledailyreport" msprop:Generator_TablePropName="dailyreport" msprop:Generator_RowDeletingName="dailyreportRowDeleting" msprop:Generator_RowChangingName="dailyreportRowChanging" msprop:Generator_RowEvHandlerName="dailyreportRowChangeEventHandler" msprop:Generator_RowDeletedName="dailyreportRowDeleted" msprop:Generator_UserTableName="dailyreport" msprop:Generator_RowChangedName="dailyreportRowChanged" msprop:Generator_RowEvArgName="dailyreportRowChangeEvent" msprop:Generator_RowClassName="dailyreportRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Status" msprop:Generator_ColumnVarNameInTable="columnStatus" msprop:Generator_ColumnPropNameInRow="Status" msprop:Generator_ColumnPropNameInTable="StatusColumn" msprop:Generator_UserColumnName="Status">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Check_in" msprop:Generator_ColumnVarNameInTable="columnCheck_in" msprop:Generator_ColumnPropNameInRow="Check_in" msprop:Generator_ColumnPropNameInTable="Check_inColumn" msprop:Generator_UserColumnName="Check_in" type="xs:dateTime" />
+              <xs:element name="Total" msprop:Generator_ColumnVarNameInTable="columnTotal" msprop:Generator_ColumnPropNameInRow="Total" msprop:Generator_ColumnPropNameInTable="TotalColumn" msprop:Generator_UserColumnName="Total">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Paid" msprop:Generator_ColumnVarNameInTable="columnPaid" msprop:Generator_ColumnPropNameInRow="Paid" msprop:Generator_ColumnPropNameInTable="PaidColumn" msprop:Generator_UserColumnName="Paid">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Balance" msprop:Generator_ColumnVarNameInTable="columnBalance" msprop:Generator_ColumnPropNameInRow="Balance" msprop:Generator_ColumnPropNameInTable="BalanceColumn" msprop:Generator_UserColumnName="Balance">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Room_No" msprop:Generator_ColumnVarNameInTable="columnRoom_No" msprop:Generator_ColumnPropNameInRow="Room_No" msprop:Generator_ColumnPropNameInTable="Room_NoColumn" msprop:Generator_UserColumnName="Room_No">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Room_Type" msprop:Generator_ColumnVarNameInTable="columnRoom_Type" msprop:Generator_ColumnPropNameInRow="Room_Type" msprop:Generator_ColumnPropNameInTable="Room_TypeColumn" msprop:Generator_UserColumnName="Room_Type">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="30" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Name" msprop:Generator_ColumnVarNameInTable="columnName" msprop:Generator_ColumnPropNameInRow="Name" msprop:Generator_ColumnPropNameInTable="NameColumn" msprop:Generator_UserColumnName="Name">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="30" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="reservation_report" msprop:Generator_TableClassName="reservation_reportDataTable" msprop:Generator_TableVarName="tablereservation_report" msprop:Generator_RowChangedName="reservation_reportRowChanged" msprop:Generator_TablePropName="reservation_report" msprop:Generator_RowDeletingName="reservation_reportRowDeleting" msprop:Generator_RowChangingName="reservation_reportRowChanging" msprop:Generator_RowEvHandlerName="reservation_reportRowChangeEventHandler" msprop:Generator_RowDeletedName="reservation_reportRowDeleted" msprop:Generator_RowClassName="reservation_reportRow" msprop:Generator_UserTableName="reservation_report" msprop:Generator_RowEvArgName="reservation_reportRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Name" msprop:Generator_ColumnVarNameInTable="columnName" msprop:Generator_ColumnPropNameInRow="Name" msprop:Generator_ColumnPropNameInTable="NameColumn" msprop:Generator_UserColumnName="Name">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="30" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Room_No" msprop:Generator_ColumnVarNameInTable="columnRoom_No" msprop:Generator_ColumnPropNameInRow="Room_No" msprop:Generator_ColumnPropNameInTable="Room_NoColumn" msprop:Generator_UserColumnName="Room_No">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Room_Type" msprop:Generator_ColumnVarNameInTable="columnRoom_Type" msprop:Generator_ColumnPropNameInRow="Room_Type" msprop:Generator_ColumnPropNameInTable="Room_TypeColumn" msprop:Generator_UserColumnName="Room_Type">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="30" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Check_in" msprop:Generator_ColumnVarNameInTable="columnCheck_in" msprop:Generator_ColumnPropNameInRow="Check_in" msprop:Generator_ColumnPropNameInTable="Check_inColumn" msprop:Generator_UserColumnName="Check_in" type="xs:dateTime" />
+              <xs:element name="Check_Out" msprop:Generator_ColumnVarNameInTable="columnCheck_Out" msprop:Generator_ColumnPropNameInRow="Check_Out" msprop:Generator_ColumnPropNameInTable="Check_OutColumn" msprop:Generator_UserColumnName="Check_Out" type="xs:dateTime" />
+              <xs:element name="Total" msprop:Generator_ColumnVarNameInTable="columnTotal" msprop:Generator_ColumnPropNameInRow="Total" msprop:Generator_ColumnPropNameInTable="TotalColumn" msprop:Generator_UserColumnName="Total">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Paid" msprop:Generator_ColumnVarNameInTable="columnPaid" msprop:Generator_ColumnPropNameInRow="Paid" msprop:Generator_ColumnPropNameInTable="PaidColumn" msprop:Generator_UserColumnName="Paid">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Balance" msprop:Generator_ColumnVarNameInTable="columnBalance" msprop:Generator_ColumnPropNameInRow="Balance" msprop:Generator_ColumnPropNameInTable="BalanceColumn" msprop:Generator_UserColumnName="Balance">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Status" msprop:Generator_ColumnVarNameInTable="columnStatus" msprop:Generator_ColumnPropNameInRow="Status" msprop:Generator_ColumnPropNameInTable="StatusColumn" msprop:Generator_UserColumnName="Status">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Room_Total" msprop:Generator_ColumnVarNameInTable="columnRoom_Total" msprop:Generator_ColumnPropNameInRow="Room_Total" msprop:Generator_ColumnPropNameInTable="Room_TotalColumn" msprop:Generator_UserColumnName="Room_Total">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Service_Total" msprop:Generator_ColumnVarNameInTable="columnService_Total" msprop:Generator_ColumnPropNameInRow="Service_Total" msprop:Generator_ColumnPropNameInTable="Service_TotalColumn" msprop:Generator_UserColumnName="Service_Total">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Net_Total" msprop:Generator_ColumnVarNameInTable="columnNet_Total" msprop:Generator_ColumnPropNameInRow="Net_Total" msprop:Generator_ColumnPropNameInTable="Net_TotalColumn" msprop:Generator_UserColumnName="Net_Total">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="roomorbedreport" msprop:Generator_TableClassName="roomorbedreportDataTable" msprop:Generator_TableVarName="tableroomorbedreport" msprop:Generator_RowChangedName="roomorbedreportRowChanged" msprop:Generator_TablePropName="roomorbedreport" msprop:Generator_RowDeletingName="roomorbedreportRowDeleting" msprop:Generator_RowChangingName="roomorbedreportRowChanging" msprop:Generator_RowEvHandlerName="roomorbedreportRowChangeEventHandler" msprop:Generator_RowDeletedName="roomorbedreportRowDeleted" msprop:Generator_RowClassName="roomorbedreportRow" msprop:Generator_UserTableName="roomorbedreport" msprop:Generator_RowEvArgName="roomorbedreportRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Room_No" msprop:Generator_ColumnVarNameInTable="columnRoom_No" msprop:Generator_ColumnPropNameInRow="Room_No" msprop:Generator_ColumnPropNameInTable="Room_NoColumn" msprop:Generator_UserColumnName="Room_No">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Room_Type" msprop:Generator_ColumnVarNameInTable="columnRoom_Type" msprop:Generator_ColumnPropNameInRow="Room_Type" msprop:Generator_ColumnPropNameInTable="Room_TypeColumn" msprop:Generator_UserColumnName="Room_Type">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="30" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Total" msprop:Generator_ColumnVarNameInTable="columnTotal" msprop:Generator_ColumnPropNameInRow="Total" msprop:Generator_ColumnPropNameInTable="TotalColumn" msprop:Generator_UserColumnName="Total">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Check_in" msprop:Generator_ColumnVarNameInTable="columnCheck_in" msprop:Generator_ColumnPropNameInRow="Check_in" msprop:Generator_ColumnPropNameInTable="Check_inColumn" msprop:Generator_UserColumnName="Check_in" type="xs:dateTime" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="servicereports" msprop:Generator_TableClassName="servicereportsDataTable" msprop:Generator_TableVarName="tableservicereports" msprop:Generator_RowChangedName="servicereportsRowChanged" msprop:Generator_TablePropName="servicereports" msprop:Generator_RowDeletingName="servicereportsRowDeleting" msprop:Generator_RowChangingName="servicereportsRowChanging" msprop:Generator_RowEvHandlerName="servicereportsRowChangeEventHandler" msprop:Generator_RowDeletedName="servicereportsRowDeleted" msprop:Generator_RowClassName="servicereportsRow" msprop:Generator_UserTableName="servicereports" msprop:Generator_RowEvArgName="servicereportsRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Service_Name" msprop:Generator_ColumnVarNameInTable="columnService_Name" msprop:Generator_ColumnPropNameInRow="Service_Name" msprop:Generator_ColumnPropNameInTable="Service_NameColumn" msprop:Generator_UserColumnName="Service_Name">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="30" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Type" msprop:Generator_ColumnVarNameInTable="columnType" msprop:Generator_ColumnPropNameInRow="Type" msprop:Generator_ColumnPropNameInTable="TypeColumn" msprop:Generator_UserColumnName="Type">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="30" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Quantity" msprop:Generator_ColumnVarNameInTable="columnQuantity" msprop:Generator_ColumnPropNameInRow="Quantity" msprop:Generator_ColumnPropNameInTable="QuantityColumn" msprop:Generator_UserColumnName="Quantity" type="xs:int" />
+              <xs:element name="Subtotal" msprop:Generator_ColumnVarNameInTable="columnSubtotal" msprop:Generator_ColumnPropNameInRow="Subtotal" msprop:Generator_ColumnPropNameInTable="SubtotalColumn" msprop:Generator_UserColumnName="Subtotal" type="xs:int" />
+              <xs:element name="Date_Recorded" msprop:Generator_ColumnVarNameInTable="columnDate_Recorded" msprop:Generator_ColumnPropNameInRow="Date_Recorded" msprop:Generator_ColumnPropNameInTable="Date_RecordedColumn" msprop:Generator_UserColumnName="Date_Recorded" type="xs:dateTime" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="guestreport" msprop:Generator_TableClassName="guestreportDataTable" msprop:Generator_TableVarName="tableguestreport" msprop:Generator_RowChangedName="guestreportRowChanged" msprop:Generator_TablePropName="guestreport" msprop:Generator_RowDeletingName="guestreportRowDeleting" msprop:Generator_RowChangingName="guestreportRowChanging" msprop:Generator_RowEvHandlerName="guestreportRowChangeEventHandler" msprop:Generator_RowDeletedName="guestreportRowDeleted" msprop:Generator_RowClassName="guestreportRow" msprop:Generator_UserTableName="guestreport" msprop:Generator_RowEvArgName="guestreportRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Email" msprop:Generator_ColumnVarNameInTable="columnEmail" msprop:Generator_ColumnPropNameInRow="Email" msprop:Generator_ColumnPropNameInTable="EmailColumn" msprop:Generator_UserColumnName="Email">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="30" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Phone1" msprop:Generator_ColumnVarNameInTable="columnPhone1" msprop:Generator_ColumnPropNameInRow="Phone1" msprop:Generator_ColumnPropNameInTable="Phone1Column" msprop:Generator_UserColumnName="Phone1" type="xs:long" />
+              <xs:element name="Phone2" msprop:Generator_ColumnVarNameInTable="columnPhone2" msprop:Generator_ColumnPropNameInRow="Phone2" msprop:Generator_ColumnPropNameInTable="Phone2Column" msprop:Generator_UserColumnName="Phone2" type="xs:long" />
+              <xs:element name="Guest_Type" msprop:Generator_ColumnVarNameInTable="columnGuest_Type" msprop:Generator_ColumnPropNameInRow="Guest_Type" msprop:Generator_ColumnPropNameInTable="Guest_TypeColumn" msprop:Generator_UserColumnName="Guest_Type">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="30" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Guest_Name" msprop:Generator_ColumnVarNameInTable="columnGuest_Name" msprop:Generator_ColumnPropNameInRow="Guest_Name" msprop:Generator_ColumnPropNameInTable="Guest_NameColumn" msprop:Generator_UserColumnName="Guest_Name">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Check_in" msprop:Generator_ColumnVarNameInTable="columnCheck_in" msprop:Generator_ColumnPropNameInRow="Check_in" msprop:Generator_ColumnPropNameInTable="Check_inColumn" msprop:Generator_UserColumnName="Check_in" type="xs:dateTime" />
+              <xs:element name="Total" msprop:Generator_ColumnVarNameInTable="columnTotal" msprop:Generator_ColumnPropNameInRow="Total" msprop:Generator_ColumnPropNameInTable="TotalColumn" msprop:Generator_UserColumnName="Total">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Paid" msprop:Generator_ColumnVarNameInTable="columnPaid" msprop:Generator_ColumnPropNameInRow="Paid" msprop:Generator_ColumnPropNameInTable="PaidColumn" msprop:Generator_UserColumnName="Paid">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Balance" msprop:Generator_ColumnVarNameInTable="columnBalance" msprop:Generator_ColumnPropNameInRow="Balance" msprop:Generator_ColumnPropNameInTable="BalanceColumn" msprop:Generator_UserColumnName="Balance">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:dailyreport" />
+      <xs:field xpath="mstns:Room_No" />
+    </xs:unique>
+    <xs:unique name="reservation_report_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:reservation_report" />
+      <xs:field xpath="mstns:Room_No" />
+    </xs:unique>
+    <xs:unique name="roomorbedreport_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:roomorbedreport" />
+      <xs:field xpath="mstns:Room_No" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>
